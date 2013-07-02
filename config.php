@@ -1,10 +1,16 @@
 <?php
-// * Fill in these values from your Twitter Developer Account.
+// * Create secrets.php with contents like:
+// $token = 'XXXX';
+// $token_secret = 'XXXX';
+// $consumer_key = 'XXXX';
+// $consumer_secret = 'XXXX';
 // * Read the readme.md file for instructions on setting that up.
-$token = 'XXXX';
-$token_secret = 'XXXX';
-$consumer_key = 'XXXX';
-$consumer_secret = 'XXXX';
+if(file_exists("secrets.php")) {
+	include "secrets.php";
+} else {
+	print('ERROR: Before using this script, copy config.php-dist to config.php and customize it.');
+	exit();
+}
 
 // * Enter your twitter username below.  This is used for the home
 // * view, and a default for lists if one isn't specified in the URL.

@@ -1,6 +1,8 @@
 config.php*
 !config.php-dist
 .ht*
+secrets.php
+localconfig.php
 
 #################
 ## Eclipse

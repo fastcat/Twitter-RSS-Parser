@@ -6,6 +6,9 @@ if(file_exists("config.php")) {
 	print('ERROR: Before using this script, copy config.php-dist to config.php and customize it.');
 	exit();
 }
+if(file_exists("localconfig.php")) {
+	include "localconfig.php";
+}
 
 // * Explicitly advertise that this is XML so browsers don't style it
 if (!isset($_GET['test'])){
