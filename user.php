@@ -30,6 +30,7 @@ print('<updated>'.date('c', strtotime($twitter_data[0]['created_at'])).'</update
 
 print('<link href="https://twitter.com/'.$twitter_data[0]['user']['screen_name'].'"/>'. PHP_EOL);
 print('<link href="'.$protocol.$_SERVER['SERVER_NAME'].str_replace("&", "&amp;", $_SERVER['REQUEST_URI']).'" rel="self" type="application/atom+xml" />'. PHP_EOL);
+print('<link href="//abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>');
 
 include "feed.php";
 ?>
