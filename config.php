@@ -32,7 +32,7 @@ $count = 10;
 // * Max tweets to retrieve. Count includes RTs, even if you exclude them below.
 // * max value: 200
 // * default:   $count
-$user_count = $count;
+//$user_count = $count;
 
 // * Sets whether retweets are included in the timeline.  Retweets count
 // * towards the $count limit even if this is true, they're just hidden.
@@ -53,7 +53,7 @@ $user_include_replies = false;
 // * Max tweets to retrieve. Count includes RTs, even if you exclude them below.
 // * max value: 200
 // * default:   $count
-$list_count = $count;
+//$list_count = $count;
 
 // * Sets whether retweets are included in the timeline.  Retweets count
 // * towards the $count limit even if this is true, they're just hidden.
@@ -69,7 +69,7 @@ $list_include_rts = false;
 // * Max tweets to retrieve. Count includes RTs, even if you exclude them below.
 // * max value: 200
 // * default:   $count
-$home_count = $count;
+//$home_count = $count;
 
 // * Sets whether retweets are included in the timeline.  Retweets count
 // * towards the $count limit even if this is true, they're just hidden.
@@ -90,7 +90,7 @@ $home_include_replies = true;
 // * Max tweets to retrieve. Count includes RTs, even if you exclude them below.
 // * max value: 200
 // * default:   $count
-$search_count = $count;
+//$search_count = $count;
 
 // * Type of search results to return.
 // * options: mixed|recent|popular

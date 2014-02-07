@@ -29,11 +29,11 @@ if (isset($_GET["count"])) {
 // * It works like: (if this is true) ? (then return this) : (else return this)
 if (isset( $_GET["screen_name"])) {
 	$screen_name = htmlspecialchars($_GET["screen_name"]);
-	$count = isset($session_count) ? $session_count : $user_count;
+	$count = isset($session_count) ? $session_count : isset($user_count) ? $user_count : $count;
 	include "user.php";
 } elseif (isset($_GET["list"])) {
 	$list = htmlspecialchars($_GET["list"]);
-	$count = isset($session_count) ? $session_count : $list_count;
+	$count = isset($session_count) ? $session_count : isset($list_count) ? $list_count : $count;
 	if(isset($_GET["owner"])) {
 		$owner = htmlspecialchars($_GET["owner"]);
 	} else {
@@ -42,10 +42,10 @@ if (isset( $_GET["screen_name"])) {
 	include "list.php";
 } elseif (isset( $_GET["q"] )) {
 	$q = $_GET["q"];
-	$count = isset($session_count) ? $session_count : $search_count;
+	$count = isset($session_count) ? $session_count : isset($search_count) ? $search_count : $count;
 	include "search.php";
 } else { // Default to home
-	$count = isset($session_count) ? $session_count : $home_count;
+	$count = isset($session_count) ? $session_count : isset($home_count) ? $home_count : $count;
 	include "home.php";
 }
 ?>
