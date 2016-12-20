@@ -5,6 +5,7 @@ if (isset($q)){
 	$td = $twitter_data;
 }
 $arrLen = count($td);
+//print(PHP_EOL.'<!--'.$arrLen.'-->'.PHP_EOL);
 for ($i=0; $i<$arrLen; $i++) {
 	print(PHP_EOL. '	<entry>'. PHP_EOL);
 		print('		<id>tag:twitter.com,' . date("Y-m-d", strtotime($td[$i]['created_at'])) . ':/' . $td[$i]['user']['screen_name'] . '/statuses/' . $td[$i]['id_str'] . '</id>'. PHP_EOL);
@@ -30,5 +31,5 @@ for ($i=0; $i<$arrLen; $i++) {
 }
 
 print('</feed>'. PHP_EOL);
-print('<!-- vim:ft=xml -->');
+// vim:ft=xml
 ?>
