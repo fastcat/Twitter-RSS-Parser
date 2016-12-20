@@ -21,7 +21,7 @@ if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'
     $protocol = 'http://';
 }
 
-if ($twitter_data['errors']) {
+if (isset($twitter_data['errors'])) {
     header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found", true, 404);
     header('Content-type: text/html; charset=utf-8');
     print('<html><body><p>Twitter says:</p><dl>');
